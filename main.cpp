@@ -4,5 +4,5 @@
 using namespace std;
 
 int main(){
-    calcGeneralPrice("./input.txt");
+    calcGeneralPrice("input.txt");
 }
