@@ -7,6 +7,7 @@ void fixCops(Money *money){
     int newGrn = money->cop / 100;
     money->grn += newGrn;
     money->cop %= 100;
+    cout << "cops";
 }
 
 void addMoney(Money *money, Money *addMoney){
@@ -16,8 +17,9 @@ void addMoney(Money *money, Money *addMoney){
 }
 
 void multiplyMoney(Money *money, int count){
-    money->grn *= count;
-    money->cop *= count;
+    int newCop = money->cop * count;
+    money->grn = money->grn * count + newCop / 100;
+    money->cop = newCop % 100;
     /*fixCops(money);*/
 }
 
